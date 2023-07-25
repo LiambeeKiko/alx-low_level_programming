@@ -1,18 +1,20 @@
 #include "main.h"
 /**
- * _strlen - returns the length of a string
- * @s: string
- * Return: length
+ * puts_half - print second half of a string
+ * @str: char array string type
+ * Description: If odd number of chars, print (length - 1) / 2
  */
-int _strlen(char *s)
+void puts_half(char *str)
 {
-	int longi = 0;
+	int i;
 
-	while (*s != '\0')
+	for (i = 0; str[i] != '\0'; i++)
+		;
+
+	i++;
+	for (i /= 2; str[i] != '\0'; i++)
 	{
-		longi++;
-		s++;
+		_putchar(str[i]);
 	}
-
-	return (longi);
+	_putchar('\n');
 }
